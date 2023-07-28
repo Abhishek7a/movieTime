@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/Movie-Time/static/css/main.daa7bc6c.css",
-    "main.js": "/Movie-Time/static/js/main.21a4b8df.js",
-    "static/js/787.3b6bfbfb.chunk.js": "/Movie-Time/static/js/787.3b6bfbfb.chunk.js",
-    "static/media/movieTime.jpg": "/Movie-Time/static/media/movieTime.380a6842471c8e9f386c.jpg",
-    "static/media/movie.jpg": "/Movie-Time/static/media/movie.68948bf693e45dbab453.jpg",
-    "static/media/bollywood.jpg": "/Movie-Time/static/media/bollywood.371870754e0d760dd14f.jpg",
-    "static/media/cinema.jpg": "/Movie-Time/static/media/cinema.763cfdad3f3e70c1a669.jpg",
-    "static/media/logo.png": "/Movie-Time/static/media/logo.879e080aceec384547f8.png",
-    "static/media/slick.svg": "/Movie-Time/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/Movie-Time/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/Movie-Time/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/Movie-Time/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/Movie-Time/index.html",
-    "main.daa7bc6c.css.map": "/Movie-Time/static/css/main.daa7bc6c.css.map",
-    "main.21a4b8df.js.map": "/Movie-Time/static/js/main.21a4b8df.js.map",
-    "787.3b6bfbfb.chunk.js.map": "/Movie-Time/static/js/787.3b6bfbfb.chunk.js.map"
+    "main.css": "/movieTime/static/css/main.413f7082.css",
+    "main.js": "/movieTime/static/js/main.0daad8aa.js",
+    "static/js/787.93783318.chunk.js": "/movieTime/static/js/787.93783318.chunk.js",
+    "static/media/movieTime.jpg": "/movieTime/static/media/movieTime.380a6842471c8e9f386c.jpg",
+    "static/media/movie.jpg": "/movieTime/static/media/movie.68948bf693e45dbab453.jpg",
+    "static/media/bollywood.jpg": "/movieTime/static/media/bollywood.371870754e0d760dd14f.jpg",
+    "static/media/cinema.jpg": "/movieTime/static/media/cinema.763cfdad3f3e70c1a669.jpg",
+    "static/media/logo.png": "/movieTime/static/media/logo.879e080aceec384547f8.png",
+    "static/media/slick.svg": "/movieTime/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/movieTime/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/movieTime/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/movieTime/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/movieTime/index.html",
+    "main.413f7082.css.map": "/movieTime/static/css/main.413f7082.css.map",
+    "main.0daad8aa.js.map": "/movieTime/static/js/main.0daad8aa.js.map",
+    "787.93783318.chunk.js.map": "/movieTime/static/js/787.93783318.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.daa7bc6c.css",
-    "static/js/main.21a4b8df.js"
+    "static/css/main.413f7082.css",
+    "static/js/main.0daad8aa.js"
   ]
 }
