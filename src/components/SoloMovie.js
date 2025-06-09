@@ -13,8 +13,7 @@ export default function SoloMovie(props) {
     const [type, setType] = useState([])
     const [company, setCompany] = useState([])
     const { id } = useParams();
-    const URL = `https://api.themoviedb.org/3${props.url}/${id}?api_key=${process.env.REACT_APP_API_KEY}`;
-
+    
     const RozerPay = () => {
         let options = {
             key: "rzp_test_GqNfAUZIfyB3nc",
@@ -34,6 +33,7 @@ export default function SoloMovie(props) {
     useEffect(() => {
         const fetchData = async () => {
             try {
+                const URL = `https://api.themoviedb.org/3${props.url}/${id}?api_key=${process.env.REACT_APP_API_KEY}`;
                 const response = await fetch(URL);
                 const jsonData = await response.json();
                 setmovie(jsonData);
@@ -46,7 +46,7 @@ export default function SoloMovie(props) {
             }
         }
         fetchData();
-    }, []);
+    }, [props.url,id]);
 
     const LgSize = () => {
         return (
@@ -107,8 +107,9 @@ export default function SoloMovie(props) {
                                         <div>{movie.runtime}m , {movie.release_date}</div>
                                     </>
                                 }
-                                <div> {type.map((type) => `${type.name}` + ", ")}</div>
-                                <div> {language.map((language) => `${language.english_name}` + ", ")}</div>
+                               <div>{type.map(type => type.name).join(", ")}</div>
+                                <div>{language.map(language => language.english_name).join(", ")}</div>
+
                                 <div className='font-bold flex text-2xl py-3'>
                                     <div className=' pr-2 text-3xl  text-red-600 '><AiFillStar /></div>
                                     {movie.popularity}<span className='text-gray-500 text-sm px-2 pt-2'> {movie.vote_count / 1000}K Votes</span>
@@ -153,15 +154,15 @@ export default function SoloMovie(props) {
                         <>
                             <div className=' text-gray-500'>{movie.overview}</div>
                             <div className='text-dark_grey-800 font-semibold'>S{movie.number_of_seasons}, Ep {movie.number_of_episodes}</div>
-                            <div className='text-dark_grey-800 '>{type.map((type) => `${type.name}` + ", ")}</div>
+                            <div className='text-dark_grey-800 '>{type.map((type) => type.name + ", ")}</div>
                         </>
                         :
                         <>
                             <div className='my-1 text-gray-500 '>{movie.overview}</div>
-                            <div className='text-dark_grey-800  font-semibold'>{movie.runtime}m . {type.map((type) => `${type.name}` + ", ")}</div>
+                            <div className='text-dark_grey-800  font-semibold'>{movie.runtime}m . {type.map((type) => type.name + ", ")}</div>
                         </>
                     }
-                    <p className='p-2 text-white my-1 bg-dark_grey-700  rounded'> {language.map((language) => `${language.english_name}` + ", ")}</p>
+                    <p className='p-2 text-white my-1 bg-dark_grey-700  rounded'> {language.map((language) => language.english_name + ", ")}</p>
                 </div>
                 <div className='z-10 fixed w-full bottom-0 bg-white pb-2 rounded-t'>
                     <button className='bg-red-600 text-white py-2 mb-2  w-full rounded ' onClick={RozerPay}>Book Now</button>
@@ -220,7 +221,7 @@ export default function SoloMovie(props) {
                     {company.map((type) => {
                         return (
                             type.logo_path === null ? "" :
-                                <div className='text-center'>
+                                <div className='text-center' key={type.id || type.name}>
                                     <img className="w-14 m-auto" src={`https://image.tmdb.org/t/p/w500${type.logo_path}`} alt="" />
                                     <p className='mt-3 '>{type.name}</p>
                                     <p className='text-gray-500 '>{type.origin_country}</p>

@@ -8,12 +8,12 @@ import { AiFillStar } from 'react-icons/ai';
 
 export default function CrouselTemplate(props) {
     const [images, setImages] = useState([]);
-    const URL = `https://api.themoviedb.org/3/${props.url}?api_key=${process.env.REACT_APP_API_KEY}`;
     const onTop = () =>
         document.documentElement.scrollTop = 0;
     useEffect(() => {
         const fetchData = async () => {
             try {
+                const URL = `https://api.themoviedb.org/3/${props.url}?api_key=${process.env.REACT_APP_API_KEY}`;
                 const response = await fetch(URL);
                 const jsonData = await response.json();
                 const movies = jsonData.results;
@@ -24,7 +24,7 @@ export default function CrouselTemplate(props) {
             }
         }
         fetchData()
-    }, [])
+    }, [props.url])
 
     return (
         <div className={props.isDark === "true" ? 'mx-auto w-5/6  bg-gray-950 text-white' : 'mx-auto w-5/6  lg:my-10 '}>

@@ -13,7 +13,7 @@ export default function Fotter() {
                 <div className="flex mt-8 flex-col md:flex-row md:justify-between">
                     <p className="w-full md:w-2/3 text-gray-400">To ensure that all Wikipedia content is verifiable, anyone may question an uncited claim. If your work has been tagged</p>
                     <div className="w-44 pt-6 md:pt-0">
-                        <a className="bg-red-600 justify-center text-center rounded-lg shadow px-10 py-3 flex items-center">Contact US</a>
+                        <Link className="bg-red-600 justify-center text-center rounded-lg shadow px-10 py-3 flex items-center">Contact US</Link>
                     </div>
                 </div>
             </div>
@@ -25,15 +25,15 @@ export default function Fotter() {
                     </div>
                     <div className="p-5">
                         <div className="text-sm uppercase text-red-600 font-bold">Resources</div>
-                        <a className="my-3 block" href="/#">Documentation <span className=" text-red-600  text-xs p-1"></span></a><a className="my-3 block" href="/#">Tutorials <span className=" text-red-600  text-xs p-1"></span></a><a className="my-3 block" href="/#">Support <span className=" text-red-600  text-xs p-1">New</span></a>
+                        <Link className="my-3 block" to="/#">Documentation <span className=" text-red-600  text-xs p-1"></span></Link><Link className="my-3 block" to="/#">Tutorials <span className=" text-red-600  text-xs p-1"></span></Link><Link className="my-3 block" to="/#">Support <span className=" text-red-600  text-xs p-1">New</span></Link>
                     </div>
                     <div className="p-5">
                         <div className="text-sm uppercase text-red-600 font-bold">Support</div>
-                        <a className="my-3 block" href="/#">Help Center <span className=" text-red-600  text-xs p-1"></span></a><a className="my-3 block" href="/#">Privacy Policy <span className=" text-red-600  text-xs p-1"></span></a><a className="my-3 block" href="/#">Conditions <span className=" text-red-600  text-xs p-1"></span></a>
+                        <Link className="my-3 block" to="/#">Help Center <span className=" text-red-600  text-xs p-1"></span></Link><Link className="my-3 block" to="/#">Privacy Policy <span className=" text-red-600  text-xs p-1"></span></Link><Link className="my-3 block" to="/#">Conditions <span className=" text-red-600  text-xs p-1"></span></Link>
                     </div>
                     <div className="p-5">
                         <div className="text-sm uppercase text-red-600 font-bold">Contact us</div>
-                        <a className="my-3 block" href="/#">XXX XXXX, Floor 4 San Francisco, CA <span className=" text-red-600  text-xs p-1"></span></a><a className="my-3 block" href="/#">contact@company.com <span className=" text-red-600  text-xs p-1"></span></a>
+                        <Link className="my-3 block" to="/#">XXX XXXX, Floor 4 San Francisco, CA <span className=" text-red-600  text-xs p-1"></span></Link><Link className="my-3 block" to="/#">contact@company.com <span className=" text-red-600  text-xs p-1"></span></Link>
                     </div>
                 </div>
             </div>
@@ -44,14 +44,19 @@ export default function Fotter() {
                     <p> Stay fit. All day, every day. </p>
                     <div className="flex-row md:flex  justify-center my-10 ">
                         <div className="flex items-center border  rounded-lg p-4 w-52 md:mx-2 mx-auto">
-                            <img src="https://cdn-icons-png.flaticon.com/512/888/888857.png" className="w-7 md:w-8" />
+                            <img 
+  src="https://cdn-icons-png.flaticon.com/512/888/888857.png" 
+  className="w-7 md:w-8" 
+  alt="Icon description here" 
+/>
+
                             <div className="text-left ml-3">
                                 <p className='text-xs text-gray-200'>Download on </p>
                                 <p className="text-sm md:text-base"> Google Play Store </p>
                             </div>
                         </div>
                         <div className="flex items-center border md:mt-0 mt-5 rounded-lg p-4 w-52  md:w-44  md:mx-2 mx-auto">
-                            <img src="https://cdn-icons-png.flaticon.com/512/888/888841.png" className="w-7 md:w-8" />
+                            <img src="https://cdn-icons-png.flaticon.com/512/888/888841.png" className="w-7 md:w-8" alt="Icon description here"  />
                             <div className="text-left ml-3">
                                 <p className='text-xs text-gray-200'>Download on </p>
                                 <p className="text-sm md:text-base"> Apple Store </p>
@@ -110,7 +115,7 @@ export default function Fotter() {
                    0.4,1.5l0,4.5l2.9,0Z"></path>
                             </svg>
                         </Link>
-                        <a href="/#" className="w-6 mx-1">
+                        <Link to="/#" className="w-6 mx-1">
                             <svg className="fill-current cursor-pointer text-gray-500 hover:text-red-600" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" space="preserve" serif="http://www.serif.com/" >
                                 <path id="Combined-Shape" d="M12,24c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12c-6.627,0
                    -12,5.373 -12,12c0,6.627 5.373,12 12,12Zm6.591,-15.556l-0.722,0c-0.189,0
@@ -119,7 +124,7 @@ export default function Fotter() {
                    0.416,-0.145 0.416,-0.323l0,-6.422c0,-0.177 -0.213,-0.385
                    -0.416,-0.385l-0.519,0l0,-1.426l4.847,0l1.583,5.704l0.042,0l1.598,-5.704l5.021,0l0,1.426Z"></path>
                             </svg>
-                        </a>
+                        </Link>
                     </div>
                     <div className="my-5 md:pb-0 pb-10">© Copyright 2020. All Rights Reserved.</div>
                 </div>
