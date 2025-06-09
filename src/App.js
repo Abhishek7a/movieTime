@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <>
-      <Router >
+      <Router basename="/movieTime">
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route exact path='/movies/:id' element={<SoloMovie url="/movie" />} />
